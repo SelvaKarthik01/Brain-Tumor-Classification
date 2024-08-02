@@ -42,6 +42,11 @@ All images are preprocessed to 240x240 dimensions. The dataset is divided into t
 - Python 3.x
 - TensorFlow
 - Keras
+
+## Ongoing Work
+
+Currently developing a custom 2D CNN model from scratch. This novel model incorporates customized layers and architecture designed to enhance classification performance without relying on pre-built models. The goal is to contribute a unique approach to brain tumor classification and further improve the overall model efficacy.
+
 - NumPy
 - Pandas
 - Matplotlib
