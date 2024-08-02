@@ -31,6 +31,8 @@ The dataset used for training and testing the models consists of 6500 brain MRI 
 - Meningioma
 - No Tumor
 
+- Source : Kaggle - https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+
 All images are preprocessed to 240x240 dimensions. The dataset is divided into training and testing sets, ensuring a balanced distribution of classes.
 
 ## Usage
