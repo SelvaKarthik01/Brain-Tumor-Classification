@@ -55,7 +55,7 @@ The custom 2D CNN model was developed from scratch, achieving the following resu
 
 ## Dataset
 - **Source:** [Kaggle - Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
-- **Description:** 6500 brain MRI images categorized into Glioma, Pituitary, Meningioma, and No Tumor. Images are preprocessed to 240x240 dimensions and divided into training and testing sets.
+- **Description:** 7023 brain MRI images categorized into Glioma, Pituitary, Meningioma, and No Tumor. Images are preprocessed to 240x240 dimensions and divided into training and testing sets.
 
 ## Usage
 ### Prerequisites
