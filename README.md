@@ -65,7 +65,15 @@ The custom 2D CNN model was developed from scratch, achieving the following resu
 - NumPy
 - Pandas
 - Matplotlib
+
 ## Conclusion
 
-This project showcases the application of advanced deep learning techniques for brain tumor classification using MRI images. The combination of EfficientNetB4, Vision Transformers, and custom 2D CNN models demonstrates the potential for high-accuracy medical imaging solutions. Despite some challenges, the models achieved significant performance metrics, highlighting their robustness and effectiveness. Our ongoing efforts aim to refine these models further, contributing valuable insights and advancements in medical image analysis. We hope this work serves as a solid foundation for future research and development in brain tumor detection and classification.
+This project showcases the application of advanced deep learning techniques for brain tumor classification using MRI images. We evaluated three distinct models:
+
+1. **EfficientNetB4 Model:** Achieved an impressive test accuracy of **99.76%**.
+2. **Hybrid EfficientNetB4 + Vision Transformer (ViT) Model:** Achieved a high test accuracy of **99.14%**.
+3. **Custom 2D CNN Model:** Achieved the highest test accuracy of **93.79%** after extended training and tuning.
+
+The EfficientNetB4 model demonstrated the highest accuracy among the models, underscoring its effectiveness for this classification task. This work illustrates the potential for high-accuracy medical imaging solutions through deep learning. Despite some challenges, the models achieved robust performance metrics, reflecting their effectiveness and adaptability. Our ongoing efforts aim to refine these models further, contributing valuable insights and advancements in medical image analysis. We hope this work serves as a solid foundation for future research and development in brain tumor detection and classification.
+
 
