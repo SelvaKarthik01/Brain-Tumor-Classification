@@ -1,79 +1,63 @@
-# Brain Tumor Classification Using Deep Learning
-
-This repository contains the code and resources for classifying brain tumors into four categories: Glioma, Pituitary Tumors, Meningioma, and No Tumor. The project employs various deep learning models to achieve high accuracy and robust performance.
+# Brain Tumor Detection and Classification Using Multiple Deep Learning Models
+This repository contains code and resources for our research on brain tumor detection and classification using multiple deep learning architectures. Our project focuses on distinguishing four classes of brain tumors in MRI images using three distinct models: EfficientNetB4, Vision Transformer (ViT) + EfficientNetB4 Hybrid Model, and a Custom 2D CNN. Each model is evaluated for accuracy, computational efficiency, and overall performance in classifying MRI images into specific brain tumor categories.
 
 ## Overview
+Brain tumors, either malignant or benign, are challenging to diagnose due to the variety of tumor appearances on MRI scans. Early detection of brain tumors is critical to prevent severe cognitive damage and improve patient outcomes. This project aims to provide a robust solution for accurate and efficient tumor classification using MRI images through deep learning models.
 
-The project includes the following models and their results:
+## Key Features
+High accuracy models for brain tumor classification.
+Automated MRI-based diagnosis for four tumor classes: Glioma, Meningioma, Pituitary Tumors, and No Tumor.
+Comparative analysis of three deep learning architectures.
+Data augmentation for improved model generalization.
+## Evaluation Metrics: Accuracy, F1-Score, AUC, Precision, and Recall.
+## Models and Methodology
+### 1. EfficientNetB4
+EfficientNetB4 provides high accuracy with a simpler, parameter-efficient architecture. This model includes:
 
-### 1. EfficientNetB4 Model
-- **Test Accuracy:** 99.76%
-- **Test Loss:** 0.1313
-- Utilizes the EfficientNetB4 architecture for feature extraction and classification.
+Data pre-processing: Resized images to 240x240 and normalized pixel values.
+Data augmentation techniques, including rotation, shifts, zoom, and flips.
+Model achieves 99.76% validation accuracy.
+### 2. Vision Transformer (ViT) + EfficientNetB4 Hybrid Model
+Our hybrid model combines the feature extraction power of Vision Transformers with EfficientNetB4’s efficiency. Key aspects:
 
-### 2. Hybrid EfficientNetB4 + Vision Transformer (ViT) Model
-- **Test Accuracy:** 99.14%
-- **Test Loss:** 0.1809
-- Combines EfficientNetB4 and Vision Transformer for improved accuracy and generalization.
+Uniform image resizing to 224x224 pixels.
+Brightness adjustments and further data augmentation.
+Model achieves 99.6% validation accuracy and superior generalization.
+### 3. Custom 2D CNN
+A custom CNN architecture designed specifically for this task. Highlights include:
 
-### 3. Custom 2D CNN Model
-The custom 2D CNN model was developed from scratch, achieving the following results after tuning:
+A series of convolutional, pooling, and dense layers for feature extraction.
+Hyperparameter tuning and regularization for overfitting control.
+Model achieves 92.77% validation accuracy.
+Dataset
+The dataset was sourced from Kaggle: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset , consisting of 7023 images categorized as:
 
-#### Initial Results (30 Epochs)
-- **Kernel Size 3x3, No Dropout, ReLU Activation:**
-  - **AUC Score:** 0.9674
-  - **Test Accuracy:** 0.8358
-  - **Test Loss:** 0.4453
+Glioma: 1321 training, 262 testing
+Meningioma: 1399 training, 306 testing
+Pituitary: 1457 training, 300 testing
+No Tumor: 1591 training, 405 testing
+Evaluation and Results
+### EfficientNetB4: Validation Accuracy - 99.76%
+### Hybrid Model (ViT + EfficientNetB4): Validation Accuracy - 99.6%
+### Custom CNN: Validation Accuracy - 92.77%
+## Performance Metrics
+Models were evaluated using:
 
-- **Kernel Size 5x5:**
-  - **AUC Score:** 0.9662
-  - **Test Accuracy:** 0.8366
-  - **Test Loss:** 0.3926
+Confusion Matrix
+Precision, Recall, and F1-Score
+AUC-ROC Curves
+## Training Journey
+Each model's training process included:
 
-- **Activation Function Sigmoid:**
-  - **Test Accuracy:** 0.8830
-  - **Test Loss:** 0.2814
+Early stopping to prevent overfitting.
+Learning rate adjustments based on validation loss.
+Checkpointing for saving the best-performing models.
+## Future Work
+We plan to explore:
 
-#### Results with Extended Training (50 Epochs)
-- **Activation Function ReLU:**
-  - **Test Accuracy:** 0.9159
-  - **Test Loss:** 0.2400
-
-- **Activation Function Sigmoid:**
-  - **Test Accuracy:** 0.9379
-  - **Test Loss:** 0.1733
-
-- **Activation Function Sigmoid with Regularization:**
-  - **Test Accuracy:** 0.8704
-  - **Test Loss:** 0.6455
-
-## Features
-- **Data Preprocessing and Augmentation:** Scripts for loading, preprocessing, and augmenting MRI images.
-- **Model Definition and Training:** Code to define, train, and evaluate EfficientNetB4, the hybrid model, and the custom CNN model.
-- **Performance Evaluation:** Tools for assessing model accuracy and loss, including AUC scores and visualizations.
-- **Research Insights:** Detailed analysis and insights from training and model performance.
-
-## Dataset
-- **Source:** [Kaggle - Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
-- **Description:** 7023 brain MRI images categorized into Glioma, Pituitary, Meningioma, and No Tumor. Images are preprocessed to 240x240 dimensions and divided into training and testing sets.
-
-## Usage
-### Prerequisites
-- Python 3.x
-- TensorFlow
-- Keras
-- NumPy
-- Pandas
-- Matplotlib
-
+Additional imaging modalities (CT, PET) alongside MRI for multi-modal classification.
+Integration of GANs for handling data imbalance.
+Application of explainable AI techniques (e.g., Grad-CAM, SHAP) for clinical transparency.
 ## Conclusion
-
-This project showcases the application of advanced deep learning techniques for brain tumor classification using MRI images. We evaluated three distinct models:
-
-1. **EfficientNetB4 Model:** Achieved an impressive test accuracy of **99.76%**.
-2. **Hybrid EfficientNetB4 + Vision Transformer (ViT) Model:** Achieved a high test accuracy of **99.14%**.
-3. **Custom 2D CNN Model:** Achieved the highest test accuracy of **93.79%** after extended training and tuning.
-
-The EfficientNetB4 model demonstrated the highest accuracy among the models, underscoring its effectiveness for this classification task. This work illustrates the potential for high-accuracy medical imaging solutions through deep learning. Despite some challenges, the models achieved robust performance metrics, reflecting their effectiveness and adaptability. Our ongoing efforts aim to refine these models further, contributing valuable insights and advancements in medical image analysis. We hope this work serves as a solid foundation for future research and development in brain tumor detection and classification.
-
+This repository presents a comprehensive approach to brain tumor classification using deep learning models. Our findings demonstrate the effectiveness of EfficientNetB4 and ViT + EfficientNetB4 Hybrid models in achieving high accuracy while maintaining computational efficiency. This work offers promising insights into developing automated tools for clinical diagnostics in MRI-based brain tumor detection.
 
