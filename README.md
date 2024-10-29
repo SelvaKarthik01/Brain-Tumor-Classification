@@ -28,7 +28,7 @@ A custom CNN architecture designed specifically for this task. Highlights includ
 
 A series of convolutional, pooling, and dense layers for feature extraction.
 Hyperparameter tuning and regularization for overfitting control.
-Model achieves 92.77% validation accuracy.
+Model achieves 97.25% validation accuracy.
 Dataset
 The dataset was sourced from Kaggle: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset , consisting of 7023 images categorized as:
 
