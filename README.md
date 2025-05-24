@@ -37,9 +37,9 @@ Meningioma: 1399 training, 306 testing
 Pituitary: 1457 training, 300 testing
 No Tumor: 1591 training, 405 testing
 Evaluation and Results
-### EfficientNetB4: Validation Accuracy - 99.76%
-### Hybrid Model (ViT + EfficientNetB4): Validation Accuracy - 99.6%
-### Custom CNN: Validation Accuracy - 97.25%
+### EfficientNetB4: Accuracy - 99.76%
+### Hybrid Model (ViT + EfficientNetB4): Accuracy - 99.6%
+### Custom CNN: Accuracy - 97.25%
 ## Performance Metrics
 Models were evaluated using:
 
