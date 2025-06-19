@@ -1,6 +1,8 @@
 # Brain Tumor Detection and Classification Using Multiple Deep Learning Models
 This repository contains code and resources for our research on brain tumor detection and classification using multiple deep learning architectures. Our project focuses on distinguishing four classes of brain tumors in MRI images using three distinct models: EfficientNetB4, Vision Transformer (ViT) + EfficientNetB4 Hybrid Model, and a Custom 2D CNN. Each model is evaluated for accuracy, computational efficiency, and overall performance in classifying MRI images into specific brain tumor categories.
 
+Paper : https://doi.org/10.1007/s00521-025-11335-x
+
 ## Overview
 Brain tumors, either malignant or benign, are challenging to diagnose due to the variety of tumor appearances on MRI scans. Early detection of brain tumors is critical to prevent severe cognitive damage and improve patient outcomes. This project aims to provide a robust solution for accurate and efficient tumor classification using MRI images through deep learning models.
 
